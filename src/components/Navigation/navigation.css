@@ -1,0 +1,54 @@
+.navigation {
+    width: 100%;
+    background-color: #F1F3FF;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* padding-top: 10px; */
+}
+
+.logo{
+    margin-left: 0.5rem;
+    width: 100px;
+    height: 34px;
+    background-color: #0D28A6;
+}
+
+.nav-link {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+} 
+
+.nav-link-register {
+    background: #5CB85F;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 992px) {
+    .navigation {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navigation {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .nav-link-register {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navigation {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+}
