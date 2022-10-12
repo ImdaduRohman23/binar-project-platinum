@@ -34,10 +34,6 @@
         padding-left: 2%;
         padding-right: 2%;
     }
-
-    .nav-link-register {
-        text-align: center;
-    }
 }
 
 @media only screen and (max-width: 600px) {

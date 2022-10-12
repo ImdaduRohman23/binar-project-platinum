@@ -1,0 +1,64 @@
+.sectionHero{
+    width: 100%;
+    background-color: #F1F3FF;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionHero__left {
+    width: 50%;
+    align-self: center;
+}
+
+.sectionHero__left h1 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+}
+
+.sectionHero__left p {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.sectionHero__left button {
+    background-color: #5CB85F;
+}
+
+.sectionHero__right {
+    width: 50%;
+    margin-top: 5px;
+}
+
+.sectionHero__right img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+    .sectionHero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sectionHero {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .sectionHero {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+}
