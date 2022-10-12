@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import './navigation.css'
+import './navigation.css';
 
 
 const Navigation = () => {
@@ -29,7 +29,6 @@ const Navigation = () => {
                             <Nav.Link href="#whyus">Why Us</Nav.Link>
                             <Nav.Link href="#testimonial">Testimonial</Nav.Link>
                             <Nav.Link href="#faq">FAQ</Nav.Link>
-                            <Nav.Link href="#" className='nav-link-register'>Register</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
                     </Navbar.Offcanvas>

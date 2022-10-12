@@ -22,11 +22,6 @@
     color: #000000;
 } 
 
-.nav-link-register {
-    background: #5CB85F;
-    color: #FFFFFF;
-}
-
 @media only screen and (max-width: 992px) {
     .navigation {
         padding-left: 5%;
