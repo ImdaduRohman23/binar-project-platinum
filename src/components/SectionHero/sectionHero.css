@@ -34,7 +34,7 @@
 }
 
 .sectionHero__right {
-    width: 50%;
+    width: 60%;
     margin-top: 5px;
     display: flex;
     align-items: flex-end;
@@ -86,10 +86,7 @@
 
     .sectionHero__right {
         width: 100%;
-        margin-top: 5px;
         padding-left: 15px;
-        display: flex;
-        align-items: flex-end;
     }
 
 }
