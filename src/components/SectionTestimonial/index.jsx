@@ -10,7 +10,7 @@ import testirate from '../../assets/testi-rate.svg';
 
 const handleDragStart = (e) => e.preventDefault();
 const items = [
-    <div className="card-testi-container">
+    <div className="card-testi-container" id='testimonial'>
         <Card style={{ width: '60%', background: '#F1F3FF'}} onDragStart={handleDragStart} role="presentation">
             <div className="card-testi">
                 <div className="card-kiri">

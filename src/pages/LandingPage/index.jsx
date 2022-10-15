@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../../components/Footer'
 import Navigation from '../../components/Navigation'
 import SectionBanner from '../../components/SectionBanner'
 import SectionFaq from '../../components/SectionFaq'
@@ -17,6 +18,7 @@ const LandingPage = () => {
             <SectionTesti />
             <SectionBanner />
             <SectionFaq />
+            <Footer />
         </div>
     )
 }

@@ -1,0 +1,62 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.footer__container {
+    width: 80%;
+    display: flex;
+}
+
+.footer__address,
+.footer__nav,
+.footer__sosmed,
+.footer__copyright {
+    width: 25%;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 30px;
+}
+
+.footer__sosmed img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer__container {
+        width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .footer__container {
+        width: 95%;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .footer__address,
+    .footer__nav,
+    .footer__sosmed,
+    .footer__copyright {
+        width: 100%;
+    }
+
+    .footer__sosmed img {
+        width: 50%;
+    }
+
+    .faq__kiri h2,
+    .faq__kiri p {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+
+
+}

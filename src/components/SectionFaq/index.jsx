@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const SectionFaq = () => {
     return (
-        <div className="faq">
+        <div className="faq" id='faq'>
             <div className="faq__container">
                 <div className="faq__kiri">
                     <h2>Frequently Asked Question</h2>
