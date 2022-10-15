@@ -42,3 +42,18 @@
 .banner__button {
     align-self: center;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .banner__container {
+        width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .banner__container {
+        width: 95%;
+    }
+
+}

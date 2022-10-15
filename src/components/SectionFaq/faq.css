@@ -1,0 +1,79 @@
+.faq {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.faq__container {
+    display: flex;
+    width: 80%;
+}
+
+.faq__kiri {
+    width: 40%;
+}
+
+.faq__kanan {
+    width: 60%;
+}
+
+.faq__kiri h2 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.faq__kiri p {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.faq__kanan button {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+@media only screen and (max-width: 768px) {
+    .faq__container {
+        width: 85%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .faq__container {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq__kiri {
+        width: 100%;
+    }
+    
+    .faq__kanan {
+        width: 100%;
+    }
+
+    .faq__kiri h2,
+    .faq__kiri p {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+
+
+}
