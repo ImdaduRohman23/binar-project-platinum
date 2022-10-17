@@ -1,0 +1,11 @@
+.carsList {
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+
+.carsList__container {
+    background-color: brown;
+    width: 80%;
+}
