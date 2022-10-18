@@ -39,7 +39,7 @@ const SearchBox = () => {
                         <option value="3">Three</option>
                     </Form.Select>
                 </Form.Group>
-                <Button variant="success" type="submit">
+                <Button variant="success" type="submit" className='search__button'>
                     Cari Mobil
                 </Button>
             </Form>

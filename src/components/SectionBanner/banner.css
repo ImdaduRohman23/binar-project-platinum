@@ -39,6 +39,12 @@
     margin-bottom: 40px;
 }
 
+.banner__link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
 .banner__button {
     align-self: center;
 }
