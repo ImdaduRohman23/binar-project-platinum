@@ -1,11 +1,47 @@
-.carsList {
+.carslist {
     width: 100%;
-    background-color: aqua;
     display: flex;
     justify-content: center;
 }
 
-.carsList__container {
-    background-color: brown;
+.carslist__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     width: 80%;
+    margin-bottom: 100px;
 }
+
+.carlist__img {
+    padding: 20px;
+    height: 200px;
+}
+
+.carlist__img img {
+    height: 100%;
+}
+
+.carlist__name {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.carlist__price {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.carlist__text {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+

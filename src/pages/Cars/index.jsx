@@ -4,7 +4,9 @@ import Navigation from '../../components/Navigation';
 import SearchBox from '../../components/SearchBox';
 import SectionHero from '../../components/SectionHero';
 import axios from "axios";
-import './cars.css'
+import './cars.css';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
 const Cars = () => {
@@ -40,16 +42,30 @@ const Cars = () => {
             <Navigation />
             <SectionHero />
             <SearchBox />
-            <div>
-            {
-                cars.map(i => (
-                    <div className="carsList">
-                        <div className="carsList__container">
-                            <h3>{i.name}</h3>
-                        </div>
-                    </div>
-                ))
-            }
+            <div className="carslist">
+                <div className="carslist__container">
+                {
+                    cars.map( item => (
+                        <Card style={{ width: '300px' }}>
+                            <div className="carlist__img">
+                                <Card.Img variant="top" src={item.image} />
+                            </div>
+                            {/* <img src={item.image} alt="car" /> */}
+                            <Card.Body>
+                            <Card.Title className='carlist__name'>{item.name}</Card.Title>
+                            <Card.Text className='carlist__price'>
+                                {item.price}
+                            </Card.Text>
+                            <Card.Text className='carlist__text'>
+                                Some quick example text to build on the card title and make up the
+                                bulk of the card's content.
+                            </Card.Text>
+                            <Button variant="success" style={{width : '100%'}} >Pilih Mobil</Button>
+                            </Card.Body>
+                        </Card>
+                    ))
+                }
+                </div>
             </div>
             <Footer />
         </div>
