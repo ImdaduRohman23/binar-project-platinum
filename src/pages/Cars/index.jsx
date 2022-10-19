@@ -7,11 +7,13 @@ import axios from "axios";
 import './cars.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router-dom';
 
 
 const Cars = () => {
     const url = 'https://bootcamp-rent-cars.herokuapp.com/customer/v2/car';
     const [cars, setCars] = useState([]);
+    const navigate = useNavigate();
 
     const getDataCars = () => {
         axios
@@ -37,6 +39,10 @@ const Cars = () => {
         getDataCars()
     ), []);
 
+    const handlePilihMobil = (id) => {
+        navigate(`/cars/${id}`)
+    }
+
     return (
         <div>
             <Navigation />
@@ -60,7 +66,7 @@ const Cars = () => {
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                             </Card.Text>
-                            <Button className='carlist__button' variant="success" style={{width : '100%'}} >Pilih Mobil</Button>
+                            <Button variant="success" style={{width : '100%'}} onClick={() => handlePilihMobil(`${item.id}`)}>Pilih Mobil</Button>
                             </Card.Body>
                         </Card>
                     ))

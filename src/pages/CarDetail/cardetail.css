@@ -1,0 +1,28 @@
+.carDetail__box {
+    height: 230px;
+    background-color: #F1F3FF;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.carDetail__box-container {
+    padding: 20px;
+    margin-bottom: -50px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.carDetail__box-container h4 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.carDetail__form {
+    display: flex;
+    gap: 5px;
+}
