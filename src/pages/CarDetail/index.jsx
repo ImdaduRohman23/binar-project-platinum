@@ -17,38 +17,20 @@ const CarDetail = () => {
                     <Form className='carDetail__form'>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Nama Mobil</Form.Label>
-                            <Form.Control type="text" placeholder="Ketik nama mobil" />
+                            <Form.Control type="text" value='mobil' />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Kategori</Form.Label>
-                            <Form.Select aria-label="Default select example">
-                                <option >Ketik nama mobil</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
+                            <Form.Control type="text" value='kategori' />
                         </Form.Group>
-                        <Form.Group>
-                            <Form.Label>Harga</Form.Label>
-                            <Form.Select aria-label="Default select example">
-                                <option>Masukan Harga Sewa/Hari</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
+                        <Form.Group className="mb-3" controlId="formNamaMobil">
+                            <Form.Label>Harga Sewa per Hari</Form.Label>
+                            <Form.Control type="text" value='berapa hayo' />
                         </Form.Group>
-                        <Form.Group>
+                        <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Status</Form.Label>
-                            <Form.Select aria-label="Default select example">
-                                <option>Masukan Harga Sewa/Hari</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </Form.Select>
+                            <Form.Control type="text" value='nunggu api' />
                         </Form.Group>
-                        <Button variant="success" type="submit" className='search__button'>
-                            Cari Mobil
-                        </Button>
                     </Form>
                 </div>
 
