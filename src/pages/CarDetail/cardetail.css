@@ -97,4 +97,13 @@
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     height: 400px;
+    padding: 20px;
+} 
+
+.carDetail__content-kanan-img {
+    height: 200px;
+}
+
+.carDetail__content-kanan-img img{
+    height: 100%;
 }

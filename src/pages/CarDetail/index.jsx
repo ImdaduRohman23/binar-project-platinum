@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
 import './cardetail.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 
 const CarDetail = () => {
     const { id } = useParams();
+    const url_car = `https://bootcamp-rent-cars.herokuapp.com/customer/car/${id}`
+    const [car, setCar] = useState();
+
+    const getDataCar = (id) => {
+        axios({
+            method: "GET",
+            url: url_car,
+            timeout: 120000,
+            params: {
+                id: id
+            },
+            headers: {
+                accept: 'application/json',
+            }
+            })
+            .then(response => setCar(response.data))
+    }
+
+    useEffect(() => (
+        getDataCar()
+    ), []);
+
+    console.log('car', car)
 
     return (
         <div className="carDetail">
@@ -17,19 +41,19 @@ const CarDetail = () => {
                     <Form className='carDetail__form'>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Nama Mobil</Form.Label>
-                            <Form.Control type="text" value='mobil' />
+                            <Form.Control type="text" value={car.name} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Kategori</Form.Label>
-                            <Form.Control type="text" value='kategori' />
+                            <Form.Control type="text" value={car.category} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Harga Sewa per Hari</Form.Label>
-                            <Form.Control type="text" value='berapa hayo' />
+                            <Form.Control type="text" value={car.price} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Status</Form.Label>
-                            <Form.Control type="text" value='nunggu api' />
+                            <Form.Control type="text" value='Sedang tidak disewa' />
                         </Form.Group>
                     </Form>
                 </div>
@@ -67,7 +91,9 @@ const CarDetail = () => {
                         </ul>
                     </div>
                     <div className="carDetail__content-kanan">
-                        <h3>Gambar Mobil</h3>
+                        <div className="carDetail__content-kanan-img">
+                            <img src={car.image} alt="car" />
+                        </div>
                         <h4>nama mobil</h4>
                         <p>Kategori</p>
                         <p>Tentukan lama sewa mobil (max. 7 hari)</p>
