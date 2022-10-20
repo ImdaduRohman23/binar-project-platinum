@@ -67,7 +67,11 @@ const CarDetail = () => {
                         </ul>
                     </div>
                     <div className="carDetail__content-kanan">
-                        <h3>kanan</h3>
+                        <h3>Gambar Mobil</h3>
+                        <h4>nama mobil</h4>
+                        <p>Kategori</p>
+                        <p>Tentukan lama sewa mobil (max. 7 hari)</p>
+                        <h5>Calender</h5>
                     </div>
                 </div>
             </div>
