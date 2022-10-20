@@ -13,7 +13,7 @@ const CarDetail = () => {
             <Navigation />
             <div className="carDetail__box">
                 <div className="carDetail__box-container">
-                    <h4>Hasil Penacarianmu</h4>
+                    <h3>Hasil Penacarianmu</h3>
                     <Form className='carDetail__form'>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Nama Mobil</Form.Label>
@@ -33,7 +33,43 @@ const CarDetail = () => {
                         </Form.Group>
                     </Form>
                 </div>
-
+            </div>
+            <div className="carDetail__content">
+                <div className="carDetail__content-container">
+                    <div className="carDetail__content-kiri">
+                        <h4>Tentang Paket</h4>
+                        <p>Icludes</p>
+                        <ul>
+                            <li>Apa saja yang termasuk dalam paket misal durasi max 12 jam</li>
+                            <li>Sudah termasuk bensin selama 12 jam </li>
+                            <li>Sudah termasuk Tiket Wisata</li>
+                            <li>Tiket Wisata Sudah termasuk pajak</li>
+                        </ul>
+                        <p>Exclude</p>
+                        <ul>
+                            <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+                            <li>Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam</li>
+                            <li>Tidak termasuk akomodasi penginapan</li>
+                        </ul>
+                        <br />
+                        <h4>Refund, Reschedule, Overtime</h4>
+                        <ul>
+                            <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+                            <li>Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam</li>
+                            <li>Tidak termasuk akomodasi penginapan</li>
+                            <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+                            <li>Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam</li>
+                            <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+                            <li>Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam</li>
+                            <li>Tidak termasuk akomodasi penginapan</li>
+                            <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+                            <li>Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam</li>
+                        </ul>
+                    </div>
+                    <div className="carDetail__content-kanan">
+                        <h3>kanan</h3>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@
     border-radius: 8px;
 }
 
-.carDetail__box-container h4 {
+.carDetail__box-container h3 {
     font-family: Arial;
     font-style: normal;
     font-weight: 700;
@@ -44,4 +44,54 @@
     line-height: 18px;
     background-color: #D0D0D0;
     width: 200px;
+}
+
+.carDetail__content {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.carDetail__content-container {
+    display: flex;
+    width: 80%;
+    gap: 20px;
+}
+
+.carDetail__content-kiri {
+    width: 60%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+.carDetail__content-kiri h4 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.carDetail__content-kiri p {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.carDetail__content-kiri li {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 175%;
+    color: #8A8A8A;
+}
+
+.carDetail__content-kanan {
+    width: 40%;
+    background-color: red;
 }
