@@ -37,7 +37,7 @@ const SectionWhyUs = () => {
             <div className="whyUs__card">
                 {
                     cardContents.map((item, x) => (
-                        <Card key={x} style={{ width: '18rem' }}>
+                        <Card className='card' key={x}>
                             <Card.Body>
                                 <img src={item.icon} alt="icon" />
                                 <Card.Title>{item.title}</Card.Title>

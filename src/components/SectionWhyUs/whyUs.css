@@ -61,11 +61,16 @@
     }    
     
     .whyUs__card {
-        flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    .sectionHero__left {
+    .card {
+        width: 40%;
+    }
+
+    /* .sectionHero__left {
         width: 100%;
         padding-bottom: 20px;
         padding-right: 20px;
@@ -84,15 +89,23 @@
     .sectionHero__right {
         width: 100%;
         padding-left: 15px;
-    }
+    } */
 
 }
 
 @media only screen and (max-width: 600px) {
-    .sectionHero {
-        padding-left: 1%;
-        padding-right: 1%;
-
+    .whyUs {
+        padding-left: 5%;
+        padding-right: 5%;
     }
+    
+    .whyUs__card {
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
 
 }
