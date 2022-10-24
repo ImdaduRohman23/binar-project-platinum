@@ -11,7 +11,7 @@ const SectionFaq = () => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
                 <div className="faq__kanan">
-                    <Accordion defaultActiveKey="0">
+                    <Accordion>
                         <Accordion.Item eventKey="0">
                             <Accordion.Header>Apa saja syarat yang dibutuhkan?</Accordion.Header>
                             <Accordion.Body>
