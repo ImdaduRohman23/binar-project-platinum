@@ -12,6 +12,7 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
+    width: 80%;
 }
 
 .carDetail__box-container h3 {
@@ -22,10 +23,34 @@
     line-height: 20px;
 }
 
-.carDetail__form {
+.carDetail__box-form{
     display: flex;
+    flex-direction: row;
     gap: 10px;
 }
+
+.box-form {
+    width: 25%;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #8A8A8A;
+}
+
+.box-form__title {
+    margin-bottom: 3px;
+}
+
+.box-form__content {
+    background-color: #D0D0D0;
+    padding: 10px;
+    border: 1px solid #D0D0D0;
+    border-radius: 2px;
+    margin-top: 0;
+}
+
 
 .carDetail__form label {
     font-family: Rubik;

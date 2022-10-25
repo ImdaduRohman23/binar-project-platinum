@@ -8,8 +8,8 @@ import axios from 'axios';
 
 const CarDetail = () => {
     const { id } = useParams();
-    const url_car = `https://bootcamp-rent-cars.herokuapp.com/customer/car/${id}`
-    const [car, setCar] = useState();
+    const url_car = `https://bootcamp-rent-cars.herokuapp.com/customer/car/${id}`;
+    const [car, setCar] = useState([]);
 
     const getDataCar = (id) => {
         axios({
@@ -30,32 +30,56 @@ const CarDetail = () => {
         getDataCar()
     ), []);
 
-    console.log('car', car)
-
     return (
         <div className="carDetail">
             <Navigation />
             <div className="carDetail__box">
                 <div className="carDetail__box-container">
                     <h3>Hasil Penacarianmu</h3>
-                    <Form className='carDetail__form'>
+                    <div className="carDetail__box-form">
+                        <div className="box-form name">
+                            <p className='box-form__title' >Nama Mobil</p>
+                            <p className='box-form__content'>{car.name}</p>
+                        </div>
+                        <div className="box-form category">
+                            <p className='box-form__title'>Kategorti</p>
+                            <p className='box-form__content'>{car.category}</p>
+                        </div>
+                        <div className="box-form price">
+                            <p className='box-form__title'>Harga Sewa per Hari</p>
+                            <p className='box-form__content'>{car.price}</p>
+                        </div>
+                        <div className="box-form status">
+                            <p className='box-form__title'>Status</p>
+                            {
+                                car.status? <p className='box-form__content'>Sedang disewa</p> : <p className='box-form__content'>Sedang tidak disewa</p>
+
+                            }
+                        </div>
+                    </div>
+                    {/* <Form className='carDetail__form'>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Nama Mobil</Form.Label>
-                            <Form.Control type="text" value={car.name} />
+                            <Form.Control type="text" value={car.name} disabled  />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Kategori</Form.Label>
-                            <Form.Control type="text" value={car.category} />
+                            <Form.Control type="text" value={car.category} disabled />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Harga Sewa per Hari</Form.Label>
-                            <Form.Control type="text" value={car.price} />
+                            <Form.Control type="text" value={car.price} disabled />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formNamaMobil">
                             <Form.Label>Status</Form.Label>
-                            <Form.Control type="text" value='Sedang tidak disewa' />
+                            {
+                                car.status? <Form.Control type="text" value='sedang disewa' disabled  /> : <Form.Control type="text" value='sedang tidak disewa' disabled />
+                            }
                         </Form.Group>
-                    </Form>
+                    </Form> */}
+                    <div className="carDetail__box-content">
+
+                    </div>
                 </div>
             </div>
             <div className="carDetail__content">
