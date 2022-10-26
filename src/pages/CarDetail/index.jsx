@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../../components/Navigation';
 import './cardetail.css';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import Footer from '../../components/Footer';
 
 const CarDetail = () => {
     const { id } = useParams();
@@ -35,7 +35,7 @@ const CarDetail = () => {
             <Navigation />
             <div className="carDetail__box">
                 <div className="carDetail__box-container">
-                    <h3>Hasil Penacarianmu</h3>
+                    <h3>Hasil Pilihanmu</h3>
                     <div className="carDetail__box-form">
                         <div className="box-form name">
                             <p className='box-form__title' >Nama Mobil</p>
@@ -53,30 +53,9 @@ const CarDetail = () => {
                             <p className='box-form__title'>Status</p>
                             {
                                 car.status? <p className='box-form__content'>Sedang disewa</p> : <p className='box-form__content'>Sedang tidak disewa</p>
-
                             }
                         </div>
                     </div>
-                    {/* <Form className='carDetail__form'>
-                        <Form.Group className="mb-3" controlId="formNamaMobil">
-                            <Form.Label>Nama Mobil</Form.Label>
-                            <Form.Control type="text" value={car.name} disabled  />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formNamaMobil">
-                            <Form.Label>Kategori</Form.Label>
-                            <Form.Control type="text" value={car.category} disabled />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formNamaMobil">
-                            <Form.Label>Harga Sewa per Hari</Form.Label>
-                            <Form.Control type="text" value={car.price} disabled />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formNamaMobil">
-                            <Form.Label>Status</Form.Label>
-                            {
-                                car.status? <Form.Control type="text" value='sedang disewa' disabled  /> : <Form.Control type="text" value='sedang tidak disewa' disabled />
-                            }
-                        </Form.Group>
-                    </Form> */}
                     <div className="carDetail__box-content">
 
                     </div>
@@ -118,13 +97,15 @@ const CarDetail = () => {
                         <div className="carDetail__content-kanan-img">
                             <img src={car.image} alt="car" />
                         </div>
-                        <h4>nama mobil</h4>
-                        <p>Kategori</p>
+                        <h4>{car.name}</h4>
+                        <i class="bi bi-people-fill"> {car.category}</i>
                         <p>Tentukan lama sewa mobil (max. 7 hari)</p>
                         <h5>Calender</h5>
+                        <button className='button-pembayaran'>Lanjutkan Pembayaran</button>
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
