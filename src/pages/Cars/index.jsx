@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
+import { Col, Row } from 'react-bootstrap';
 
 const Cars = () => {
     const url = 'https://bootcamp-rent-cars.herokuapp.com/customer/v2/car';
@@ -17,8 +18,8 @@ const Cars = () => {
     const [minPrice, setMinPrice]= useState("");
     const [maxPrice, setMaxPrice]= useState("");
     const [isRented, setIsRented] = useState("");
-    const [page, setPage] = useState(1);
-    const [limit, setLimit] = useState(10);  
+    const [page] = useState(1);
+    const [limit] = useState(50);  
     const navigate = useNavigate();
 
     const getDataCars = (namaMobil, kategoriMobil, minPrice, maxPrice, isRented, page, limit) => {
@@ -49,9 +50,9 @@ const Cars = () => {
             });
     }
 
-    useEffect(() => (
+    useEffect(() => {
         getDataCars(namaMobil, kategoriMobil, minPrice, maxPrice, isRented, page, limit)
-    ), [namaMobil, kategoriMobil, minPrice, maxPrice, isRented, page, limit]);
+    }, [namaMobil, kategoriMobil, minPrice, maxPrice, isRented, page, limit]);
 
     const handlePilihMobil = (id) => {
         navigate(`/cars/${id}`)
@@ -122,26 +123,30 @@ const Cars = () => {
 
             <div className="carslist">
                 <div className="carslist__container">
-                {
-                    cars.map( item => (
-                        <Card style={{ width: '300px' }}>
-                            <div className="carlist__img">
-                                <Card.Img variant="top" src={item.image} />
-                            </div>
-                            <Card.Body>
-                            <Card.Title className='carlist__name'>{item.name}</Card.Title>
-                            <Card.Text className='carlist__price'>
-                                {item.price}
-                            </Card.Text>
-                            <Card.Text className='carlist__text'>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </Card.Text>
-                            <Button variant="success" style={{width : '100%'}} onClick={() => handlePilihMobil(`${item.id}`)}>Pilih Mobil</Button>
-                            </Card.Body>
-                        </Card>
-                    ))
-                }
+                    <Row xs={1} md={2} lg={3} className="g-4">
+                        {
+                            cars.map( item => (
+                                <Col key={item.id}>
+                                <Card style={{ width: '300px' }}>
+                                    <div className="carlist__img">
+                                        <Card.Img variant="top" src={item.image} />
+                                    </div>
+                                    <Card.Body>
+                                    <Card.Title className='carlist__name'>{item.name}</Card.Title>
+                                    <Card.Text className='carlist__price'>
+                                        {item.price}
+                                    </Card.Text>
+                                    <Card.Text className='carlist__text'>
+                                        Some quick example text to build on the card title and make up the
+                                        bulk of the card's content.
+                                    </Card.Text>
+                                    <Button variant="success" style={{width : '100%'}} onClick={() => handlePilihMobil(`${item.id}`)}>Pilih Mobil</Button>
+                                    </Card.Body>
+                                </Card>
+                                </Col>
+                            ))
+                        }
+                    </Row>
                 </div>
             </div>
             <Footer />

@@ -75,7 +75,7 @@
     display: flex;
     justify-content: center;
     padding-top: 120px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .carDetail__content-container {
@@ -122,7 +122,7 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    height: 400px;
+    height: 450px;
     padding: 20px;
 } 
 
@@ -176,3 +176,11 @@
     color: #FFFFFF;
     border: none;
     }
+
+.carDetail__content-kanan-total {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}

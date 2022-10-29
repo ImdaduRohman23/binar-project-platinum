@@ -5,6 +5,7 @@ import './cardetail.css';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import Footer from '../../components/Footer';
+import swal from 'sweetalert';
 
 const CarDetail = () => {
     const { id } = useParams();
@@ -26,9 +27,14 @@ const CarDetail = () => {
             .then(response => setCar(response.data))
     }
 
-    useEffect(() => (
+    useEffect(() => {
+        window.scrollTo(0, 0);
         getDataCar()
-    ), []);
+    }, []);
+
+    const handleLP = () => (
+        swal("Good job!", "LEVEL GOLD COMPLETED", "success")
+    )
 
     return (
         <div className="carDetail">
@@ -98,10 +104,12 @@ const CarDetail = () => {
                             <img src={car.image} alt="car" />
                         </div>
                         <h4>{car.name}</h4>
-                        <i class="bi bi-people-fill"> {car.category}</i>
+                        <i className="bi bi-people-fill"> {car.category}</i>
                         <p>Tentukan lama sewa mobil (max. 7 hari)</p>
-                        <h5>Calender</h5>
-                        <button className='button-pembayaran'>Lanjutkan Pembayaran</button>
+                        <h5 className='carDetail__content-kanan-total'>Total: Rp.{car.price}</h5>
+                        <Button onClick={handleLP} className='button-pembayaran' variant='success' >
+                            Lanjutkan Pembayaran
+                        </Button>
                     </div>
                 </div>
             </div>
