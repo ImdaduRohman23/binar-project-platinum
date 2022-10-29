@@ -25,12 +25,13 @@ const CarDetail = () => {
             }
             })
             .then(response => setCar(response.data))
+            .catch(error => alert(error))
     }
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        getDataCar()
-    }, []);
+        getDataCar(id)
+    }, [id]);
 
     const handleLP = () => (
         swal("Good job!", "LEVEL GOLD COMPLETED", "success")

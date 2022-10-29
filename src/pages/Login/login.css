@@ -1,0 +1,67 @@
+.login {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.login__form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login__form form {
+    width: 50%;
+}
+
+.login__form h3 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+
+.login__form label {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.login__form button {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form__bawah p {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+
+
+.login__img {
+    width: 50%;
+}
+
+.login__img img {
+    width: 100%;
+}
+
+
