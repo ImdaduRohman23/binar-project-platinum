@@ -55,13 +55,32 @@
 
 
 
-
 .login__img {
     width: 50%;
+    overflow: hidden;
 }
 
 .login__img img {
     width: 100%;
+    margin-top: -50px;
 }
 
 
+@media only screen and (max-width: 768px) {
+    .login__img {
+        display: none;
+    }
+
+    .login__form {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .login__form form {
+        width: 80%;
+    }
+}
