@@ -4,6 +4,7 @@ import CarDetail from './pages/CarDetail';
 import Cars from './pages/Cars';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/cars" element={<Cars />} />
         <Route path="/cars/:id" element={<CarDetail />} />
       </Routes> */}
-      <Login />
+      <Register />
     </div>
   );
 }
