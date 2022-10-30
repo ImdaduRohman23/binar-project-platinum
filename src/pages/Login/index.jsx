@@ -3,13 +3,14 @@ import './login.css';
 import loginBanner from '../../assets/loginBanner.svg';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,10 +23,11 @@ const Login = () => {
             password: password
             }
         })
-        .then(res => localStorage.setItem('token', res.data.access_token))
-        .catch(error => console.log(error))
-        setEmail('');
-        setPasword('');
+        .then(res => {
+            window.localStorage.setItem('token', res.data.access_token);
+            navigate('/');
+        })
+        .catch(error => console.log(error));
     }
 
     return (
@@ -46,8 +48,10 @@ const Login = () => {
                         Sign In
                     </Button>
                 </Form>
-                <p className='form__bawah'>Dont have an account? <Link> Sign Up for free
-                </Link></p>
+                <p className='form__bawah'>
+                    Dont have an account? 
+                    <Link to='/register'> Sign Up for free</Link>
+                </p>
             </div>
             <div className="login__img">
                 <img src={loginBanner} alt="" />

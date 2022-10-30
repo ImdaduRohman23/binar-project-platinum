@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import PrivateRoute from './HOC/PrivateRoute';
 import CarDetail from './pages/CarDetail';
 import Cars from './pages/Cars';
 import LandingPage from './pages/LandingPage';
@@ -9,12 +10,15 @@ import Register from './pages/Register';
 function App() {
   return (
     <div className="App">
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<LandingPage/>} />
-        <Route path="/cars" element={<Cars />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/cars" element={<PrivateRoute>
+          <Cars />
+        </PrivateRoute>} />
         <Route path="/cars/:id" element={<CarDetail />} />
-      </Routes> */}
-      <Register />
+      </Routes>
     </div>
   );
 }

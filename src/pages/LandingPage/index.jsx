@@ -9,6 +9,7 @@ import SectionTesti from '../../components/SectionTestimonial'
 import SectionWhyUs from '../../components/SectionWhyUs'
 
 const LandingPage = () => {
+    // window.location.reload();
     return (
         <div>
             <Navigation />
