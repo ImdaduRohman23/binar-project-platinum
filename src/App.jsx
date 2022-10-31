@@ -5,12 +5,13 @@ import CarDetail from './pages/CarDetail';
 import Cars from './pages/Cars';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
+import Payment from './pages/Payment';
 import Register from './pages/Register';
 
 function App() {
   return (
     <div className="App">
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
@@ -18,7 +19,8 @@ function App() {
           <Cars />
         </PrivateRoute>} />
         <Route path="/cars/:id" element={<CarDetail />} />
-      </Routes>
+      </Routes> */}
+      <Payment />
     </div>
   );
 }

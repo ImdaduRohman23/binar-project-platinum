@@ -1,0 +1,149 @@
+.payment__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 100%;
+    height: 250px;
+    background-color: #F1F3FF;
+    margin-top: 50px;
+}
+
+.top-step {
+    display: flex;
+    gap: 10px;
+}
+
+.top-step p {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.bi-1-square-fill{
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.payment__content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.payment__content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    gap: 20px;
+}
+
+.payment__content-left {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 30px;
+    width: 55%;
+}
+
+.payment__content-left h3 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.payment__content-left p {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+.bank {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #EEEEEE;
+    margin-bottom: 20px;
+}
+
+.bca {
+    border: 1px solid #D0D0D0;
+    display: inline-block;
+    width: 100px;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.payment__content-right {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 30px;
+    width: 45%;
+}
+
+.payment__content-right li {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #151515;
+}
+
+
+.payment__content-right h3 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
+
+.payment__content-right h5 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #151515;
+}
+
+.termasuk {
+    color: #5CB85F;
+}
+
+.payment__content-right-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 2px solid #D0D0D0;
+    padding-top: 20px;
+}
+
+
+.payment__content-right-total h6 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.payment__content-right button {
+    margin-top: 20px;
+    width: 100%;
+}
+

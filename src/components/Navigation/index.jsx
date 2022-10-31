@@ -4,12 +4,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from 'react-router-dom';
-import './navigation.css'
+import { Link, useNavigate } from 'react-router-dom';
+import './navigation.css';
 
 
 const Navigation = () => {
     const token = localStorage.getItem('token');
+    const navigate = useNavigate();
 
     return (
         <div className='navigation'>
@@ -34,7 +35,7 @@ const Navigation = () => {
                             <Nav.Link href="#testimonial">Testimonial</Nav.Link>
                             <Nav.Link href="#faq">FAQ</Nav.Link>
                             {
-                                token? <Link to='.'><Button variant='danger' onClick={() => {window.localStorage.removeItem('token'); window.location.reload()}}>Logout</Button></Link> : <Link to='/register'><Button variant='success'>Register</Button></Link>
+                                token? <Link to='.'><Button variant='danger' onClick={() => {window.localStorage.removeItem('token'); navigate('.')}}>Logout</Button></Link> : <Link to='/register'><Button variant='success'>Register</Button></Link>
                             }
                         </Nav>
                     </Offcanvas.Body>

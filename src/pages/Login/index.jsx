@@ -5,12 +5,20 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
+import { useEffect } from 'react';
 
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPasword] = useState('');
     const navigate = useNavigate();
+
+    useEffect((navigate) => {
+        const token = window.localStorage.getItem('token');
+        if(token){
+            navigate('/')
+        }
+    }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault();
